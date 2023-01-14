@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('student/create', 'App\Http\Controllers\Student\StudentController@create');
+Route::post('student/store', 'App\Http\Controllers\Student\StudentController@store');
