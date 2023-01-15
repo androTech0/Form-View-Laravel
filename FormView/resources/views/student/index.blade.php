@@ -27,7 +27,11 @@
                                 <td>{{ $student->nationality }}</td>
                                 <td>{{ $student->postal_code }}</td>
                                 <td><a href="{{ URL('student/edit/' . $student->id) }}">Edit Student</a></td>
-                                <td><a href="{{ URL('student/delete/' . $student->id) }}">Delete Student</a></td>
+                                @if ($student->deleted_at != null)
+                                    <td><a href="{{ URL('student/restore/' . $student->id) }}">Restore Student</a></td>
+                                @else
+                                    <td><a href="{{ URL('student/delete/' . $student->id) }}">Delete Student</a></td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>

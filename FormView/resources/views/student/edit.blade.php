@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    <title>Student Create</title>
+    <title>Student Edit</title>
 @endsection
 
 @section('content')
