@@ -34,10 +34,17 @@ Route::get('/', function () {
 // Route::get('student/delete/{id}', 'App\Http\Controllers\Student\StudentController2@delete');
 
 // Eloquent Model (ORM)
-Route::get('student/create', 'App\Http\Controllers\Student\StudentController3@create');
-Route::post('student/store', 'App\Http\Controllers\Student\StudentController3@store');
-Route::get('student/index', 'App\Http\Controllers\Student\StudentController3@index2');
-Route::get('student/edit/{id}', 'App\Http\Controllers\Student\StudentController3@edit');
-Route::post('student/update/{id}', 'App\Http\Controllers\Student\StudentController3@update');
-Route::get('student/delete/{id}', 'App\Http\Controllers\Student\StudentController3@delete');
-Route::get('student/restore/{id}', 'App\Http\Controllers\Student\StudentController3@restore');
+Route::get('student/create', 'App\Http\Controllers\Student\StudentController3@create'); // GET
+Route::post('student/store', 'App\Http\Controllers\Student\StudentController3@store'); // POST
+Route::get('student/index', 'App\Http\Controllers\Student\StudentController3@index2'); // GET
+Route::get('student/edit/{id}', 'App\Http\Controllers\Student\StudentController3@edit'); // GET
+Route::post('student/update/{id}', 'App\Http\Controllers\Student\StudentController3@update'); // PUT,PATCH
+Route::get('student/delete/{id}', 'App\Http\Controllers\Student\StudentController3@delete'); // DELETE
+Route::get('student/restore/{id}', 'App\Http\Controllers\Student\StudentController3@restore'); //
+
+
+// Cars Carage
+// Route::get('carage/owner/index', 'App\Http\Controllers\Carage\OwnerController@index');
+// Route::get('carage/car/index', 'App\Http\Controllers\Carage\CarController@index');
+// Route::get('carage/mechanic/index', 'App\Http\Controllers\Carage\MechanicController@index');
+// Route::get('carage/mechanic/index2/{id}', 'App\Http\Controllers\Carage\MechanicController@index2');

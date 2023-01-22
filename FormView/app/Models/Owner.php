@@ -10,4 +10,9 @@ class Owner extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function car()
+    {
+        return $this->belongsTo('App\Models\Car');
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StudentCreationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Student;
@@ -18,7 +19,7 @@ class StudentController3 extends Controller
     }
 
     // DML - Eloquent Model (ORM) - INSERT
-    public function store(Request $request)
+    public function store(StudentCreationRequest $request)
     {
         $student = new Student();
         $student->name = $request['name'];

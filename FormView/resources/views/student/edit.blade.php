@@ -10,6 +10,7 @@
             <div class="col-12">
                 <form action="{{ URL('student/update/' . $student->id) }}" method="POST">
                     @csrf
+                    @method('PUT')
                     <div class="form-group">
                         <label for="name">Student Name</label>
                         <input id="name" class="form-control" type="text" name="name" value="{{ $student->name }}">

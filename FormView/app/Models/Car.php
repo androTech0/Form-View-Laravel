@@ -10,4 +10,14 @@ class Car extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function owner()
+    {
+        return $this->hasOne('App\Models\Owner');
+    }
+
+    public function mechanic()
+    {
+        return $this->belongsTo('App\Models\Mechanic');
+    }
 }
